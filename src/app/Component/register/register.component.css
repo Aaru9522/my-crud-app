@@ -1,14 +1,8 @@
-.register-container {
-    max-width: 400px;
-    margin: 2rem auto;
-  }
-  
-  .register-container div {
-    margin-bottom: 1rem;
-  }
-  
-  .error {
-    color: red;
-    font-size: 0.8em;
-  }
-  
+.centered {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.full-width {
+  width: 100%;
+}

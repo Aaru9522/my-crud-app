@@ -18,5 +18,19 @@ export class UserService {
   getAll(): Observable<UserDto[]> {
     return this.http.get<UserDto[]>(this.base);
   }
-  // getById, create, update, delete as needed...
+  getById(id: number): Observable<UserDto> {
+    return this.http.get<UserDto>(`${this.base}/${id}`);
+  }
+
+  create(u: Partial<UserDto>): Observable<UserDto> {
+    return this.http.post<UserDto>(this.base, u);
+  }
+
+  update(id: number, u: Partial<UserDto>): Observable<void> {
+    return this.http.put<void>(`${this.base}/${id}`, u);
+  }
+
+  delete(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.base}/${id}`);
+  }
 }

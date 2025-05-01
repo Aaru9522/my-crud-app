@@ -1,6 +1,8 @@
 import { NgModule }                    from '@angular/core';
 import { BrowserModule }               from '@angular/platform-browser';
 import { AppRoutingModule }            from './app-routing.module';
+import { MaterialModule } from './material.module';
+
 
 // make sure these paths are correct!
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
@@ -15,6 +17,7 @@ import { NotFoundComponent }       from './Component/not-found/not-found.compone
 
 import { RequestInterceptor }      from './services/request.interceptor';
 import { ResponseInterceptor }     from './services/response.interceptor';
+import { HeaderComponent } from './Component/header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,13 @@ import { ResponseInterceptor }     from './services/response.interceptor';
     LoginComponent,
     RegisterComponent,
     UserComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MaterialModule,
 
     // <-- these two must be here so your login/register forms work
     FormsModule,
