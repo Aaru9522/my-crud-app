@@ -1,0 +1,12 @@
+.not-found {
+    text-align: center;
+    margin: 3rem;
+  }
+  
+  .not-found a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
